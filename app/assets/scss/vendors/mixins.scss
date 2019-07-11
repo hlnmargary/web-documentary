@@ -1,0 +1,14 @@
+$first-color: #2222BA;
+$bgdark: linear-gradient(269.55deg, #000000 4.63%, rgba(0, 0, 0, 0.37) 96.92%);
+
+@mixin flexcolumn($justify) {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: $justify; 
+}
+
+@mixin bgimg ($size) {
+  background-size: $size; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}

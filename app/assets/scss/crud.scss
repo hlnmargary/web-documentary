@@ -1,0 +1,13 @@
+.name {
+  font-size: 28px;
+  display: inline-block;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+.edit {
+  display: inline;
+  color: black;
+  background-color: lightblue;
+}

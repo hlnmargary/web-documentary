@@ -1,0 +1,57 @@
+.veteran {
+  position: relative;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+
+  img {
+    position: absolute;
+    object-fit: cover;
+  }
+
+  .parallax {
+    overflow: hidden;
+    position: absolute;
+    margin-top: 10vh;
+    margin-left: 10vw;
+    z-index: 1;
+    width: 80vw;
+    height: 80vh;
+    .front {
+      width: 100%;
+    }
+  }
+
+  .back {
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    filter: brightness(50%);
+  }
+}
+
+.veterans__text {
+  position: absolute; 
+  bottom: 0; 
+  left: 15%;
+  @include flexcolumn(space-between); 
+  width: 35%; 
+
+  p, h2 {
+    z-index: 2;
+  }
+
+  p{
+    line-height: 150%;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.856);
+  }
+
+  h2 {
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.856);
+    font-size: 250px; 
+    font-weight: bold; 
+  }
+
+}

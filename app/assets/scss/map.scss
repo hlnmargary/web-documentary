@@ -1,0 +1,163 @@
+.underground {
+  cursor: none;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.mp {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #2222BA;
+  z-index: 4;
+}
+
+.point {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: 'transparent';
+  z-index: 4;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 0.2s ease;
+}
+
+.point:hover {
+  transform: scale(2);
+  background-color: #2222BA;
+}
+
+.legend{
+  display: flex;
+  position: absolute;
+  align-items: center;
+  bottom: 4%;
+  left:4%;
+  z-index: 4;
+
+  
+  p {  
+    margin-left: 10px;
+    text-align: left;
+    font-weight: normal;
+    line-height: 130%;
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
+.legend__point{
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #2222BA;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover{
+    transform: scale(2);
+  }
+
+}
+
+.underground {
+  position : absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  z-index: 2;
+  opacity: 0.7;
+  background-size: cover;
+  background-position: center;
+}
+
+.zone {
+  z-index: 3;
+  position: absolute;
+  border: solid rgba(34,34,186,0.5) 2px;
+  border-radius: 5px;
+  background: rgba(34,34,186,0.1);
+}
+
+.riverside {
+  top: 2%;
+  left: 42%;
+  width: 80px;
+  height: 400px;
+  transform: rotate(30deg);
+}
+.grandCentral {
+  top: 35%;
+  left: 46%;
+  width: 100px;
+  height: 100px;
+  transform: rotate(30deg);
+}
+
+.pennStation  {
+  top: 55%;
+  left: 40%;
+  width: 120px;
+  height: 140px;
+  transform: rotate(30deg);
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://image.noelshack.com/fichiers/2019/26/1/1561373957-new-york-map.jpg");
+  background-size: cover;
+  background-position:  center;
+}
+
+.cursor {
+  position: absolute;
+  background: black;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  z-index: 2;
+}
+
+.text {
+  font-family: 'Verdana';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 450px;
+  height: 450px;
+  z-index: 2;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.mapInfo {
+  position: absolute; 
+  line-height: 150%;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 8%;
+  margin: 2%;
+  padding: 1% 2%;
+  border-left: 0.5px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h1 {
+    text-transform: uppercase; 
+    font-size: 2rem; 
+  }
+
+
+}

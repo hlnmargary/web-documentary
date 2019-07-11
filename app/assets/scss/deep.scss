@@ -1,0 +1,114 @@
+@keyframes grow {
+  from {
+    width: 0px; 
+  }
+}
+
+.next__chapter {
+  position: absolute;
+  bottom: 8%;
+  z-index: 9;
+  fill: white;
+  transform: translateX(-50%);
+  left: 50%;
+  font-weight: normal;
+  font-size: 18px;
+  opacity: 0;
+  transition: all 0.5s;
+  color: white;
+  text-decoration: none;
+}
+
+.next__chapter--isReached{
+  opacity: 1;
+
+}
+
+.end {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  img {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.end__text {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+  background: black;
+  opacity: 0;
+  transition: opacity 0.2s;
+
+  p {
+    width: 50%;
+    text-align: center;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.925);
+    position: relative;
+  }
+}
+
+.next__anim {
+  opacity: 0;
+  position: relative;
+  left:50%;
+  transform: translateX(-50%);
+  bottom: 7%;
+  z-index: 9;
+  width: 15%;
+  height: 2px;
+  background: white;
+  transition: all 0.2s;
+  animation: grow 1s linear alternate infinite; 
+}
+
+.next__anim--isReached {
+  opacity: 1;
+}
+
+
+.end__text--isReached {
+  opacity: 0.5;
+  transition: all 0.2s;
+}
+
+
+.end__section {
+  min-height: 200vh;
+  position: relative;
+}
+
+.end__section--horizontal {
+  height: 100vw;
+
+  .end__section__inner {
+    width: 200vw;
+    height: 100vh;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.end__section--isFixed {
+  .end__section__inner {
+    position: fixed;
+  }
+}
+
+.end__section--isScrolled {
+  .end__section__inner {
+    bottom: 0;
+    top: auto;
+  }
+}

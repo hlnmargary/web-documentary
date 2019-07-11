@@ -1,0 +1,93 @@
+//melange
+
+.melange {
+  position: fixed;
+  top: 0;
+  background: black;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-image: url('../img/kitchen.jpg');
+  @include bgimg(cover);
+  
+  img {
+    width: 17%;
+
+    opacity: 0.8;
+  }
+}
+
+.melange__desc{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top:0;
+  width:100vw;
+  height: 100vh;
+  transition: all 0.2s;
+
+  h2{
+    font-size: 100px;
+    margin-bottom: 20px;
+    text-shadow: 5px 5px rgba(0,0,0,0.7);
+  }
+
+  h3{
+    color: #2222BA;
+    margin-bottom: 20px;
+    font-size: 70px;
+    text-shadow: 5px 5px rgba(0,0,0,0.7);
+  }
+
+  p{
+    line-height: 150%;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.856);
+  }
+}
+
+.melange__container{
+  width:50%;
+  text-align: center;
+  // background: rgba(0,0,0,0.4);
+}
+
+.melange__desc--isReached{
+  background :rgba(0,0,0,0.6);
+}
+
+
+//scroll 
+
+.melange__section {
+  min-height: 200vh;
+  position: relative;
+}
+
+.melange__section--horizontal {
+  height: 200vw;
+
+  .melange__section__inner {
+    width: 200vw;
+    height: 100vh;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.melange__section--isFixed {
+  .melange__section__inner {
+    position: fixed;
+  }
+}
+
+.melange__section--isScrolled {
+  .melange__section__inner {
+    bottom: 0;
+    top: auto;
+  }
+}
